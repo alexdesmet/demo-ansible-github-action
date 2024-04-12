@@ -1,0 +1,12 @@
+---
+- name: just a test playbook
+  hosts: all
+  gather_facts: sometimes
+
+  tasks:
+    - name: Run yum update
+  ansible.builtin.yum:
+    name: "*"
+    state: latest
+  when: ansible_distribution == 'RedHat' and ansible_distribution_major_version == '9'
+
