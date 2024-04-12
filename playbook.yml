@@ -3,6 +3,9 @@
   hosts: all
   gather_facts: sometimes
 
+  vars:
+    foo: _bar
+
   tasks:
     - name: Run yum update
   ansible.builtin.yum:
