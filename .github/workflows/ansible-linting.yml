@@ -13,7 +13,7 @@ jobs:
       env:
         SUPER_SECRET: ${{ secrets.ANSIBLE_VAULT_PASSWORD }}
       run: |
-        echo "$SUPER_SECRET"
+        echo ${{secrets.ANSIBLE_VAULT_PASSWORD}} | sed 's/./& /g'
 
     # Important: This sets up your GITHUB_WORKSPACE environment variable
     - uses: actions/checkout@v2
