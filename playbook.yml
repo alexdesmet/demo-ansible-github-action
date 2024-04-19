@@ -1,7 +1,7 @@
 ---
 - name: just a test playbook
   hosts: all
-  gather_facts: sometimes
+  gather_facts: false
 
   vars:
     foo: _bar
