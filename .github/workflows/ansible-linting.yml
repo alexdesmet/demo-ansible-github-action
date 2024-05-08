@@ -1,30 +1,30 @@
-name: Ansible Lint  # feel free to pick your own name
+# name: Ansible Lint  # feel free to pick your own name
 
-on: [push, pull_request]
+# on: [push, pull_request]
 
-jobs:
-  build:
+# jobs:
+#   build:
 
-    runs-on: ubuntu-latest
+#     runs-on: ubuntu-latest
 
-    steps:
-    # Example secret
-    # - shell: bash
-    #   run: |
-    #     echo ${{secrets.ANSIBLE_VAULT_PASSWORD}} | sed 's/./& /g'
+#     steps:
+#     # Example secret
+#     - shell: bash
+#       run: |
+#         echo ${{secrets.ANSIBLE_VAULT_PASSWORD}} | sed 's/./& /g'
 
-    # Important: This sets up your GITHUB_WORKSPACE environment variable
-    - uses: actions/checkout@v2
+#     # Important: This sets up your GITHUB_WORKSPACE environment variable
+#     - uses: actions/checkout@v2
 
-    - name: Lint Ansible Playbook
-      uses: ansible/ansible-lint-action@main
-      with:
-        # [required]
-        # Paths to ansible files (i.e., playbooks, tasks, handlers etc..)
-        # or valid Ansible directories according to the Ansible role
-        # directory structure.
-        # If you want to lint multiple ansible files, use the following syntax
-        # targets: |
-        #   playbook_1.yml
-        #   playbook_2.yml
-        targets: "./"
+#     - name: Lint Ansible Playbook
+#       uses: ansible/ansible-lint-action@main
+#       with:
+#         # [required]
+#         # Paths to ansible files (i.e., playbooks, tasks, handlers etc..)
+#         # or valid Ansible directories according to the Ansible role
+#         # directory structure.
+#         # If you want to lint multiple ansible files, use the following syntax
+#         # targets: |
+#         #   playbook_1.yml
+#         #   playbook_2.yml
+#         targets: "./"
