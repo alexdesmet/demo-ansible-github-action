@@ -8,10 +8,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # # Example secret
-    # - shell: bash
-    #   run: |
-    #     echo ${{secrets.ANSIBLE_VAULT_PASSWORD}} | sed 's/./& /g'
+    # Example secret
+    - shell: bash
+      run: |
+        echo ${{secrets.ANSIBLE_VAULT_PASSWORD}} | sed 's/./& /g'
 
     # Important: This sets up your GITHUB_WORKSPACE environment variable
     - uses: actions/checkout@v2
