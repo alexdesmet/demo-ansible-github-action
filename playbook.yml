@@ -4,7 +4,7 @@
   gather_facts: false
 
   vars:
-    foo: _bar
+    foo: _bar2
 
   tasks:
     - name: Run yum update
