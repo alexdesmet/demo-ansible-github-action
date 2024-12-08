@@ -9,9 +9,9 @@ jobs:
 
     steps:
     # Example secret
-    - shell: bash
-      run: |
-        echo ${{secrets.ANSIBLE_VAULT_PASSWORD}} | sed 's/./& /g'
+    # - shell: bash
+    #   run: |
+    #     echo ${{secrets.ANSIBLE_VAULT_PASSWORD}} | sed 's/./& /g'
 
     # Important: This sets up your GITHUB_WORKSPACE environment variable
     - uses: actions/checkout@v2
