@@ -4,12 +4,11 @@
   gather_facts: false
 
   vars:
-    foo: _bar
+    foo: _bar2
 
   tasks:
-    - name: Run yum update
-      ansible.builtin.yum:
+    - name: Run dnf update
+      ansible.builtin.dnf:
         name: "*"
         state: latest
-      when: ansible_distribution == 'RedHat' and ansible_distribution_major_version == '9'   
-
+      when: ansible_distribution == 'RedHat' and ansible_distribution_major_version == '9'    
