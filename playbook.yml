@@ -1,7 +1,7 @@
 ---
 - name: just a test playbook
   hosts: all
-  gather_facts: false
+  gather_facts: nope
 
   vars:
     foo: _bar2
@@ -10,5 +10,5 @@
     - name: Run dnf update
       ansible.builtin.dnf:
         name: "*"
-        state: latest # noqa: package-latest
+        state: latest
       when: ansible_distribution == 'RedHat' and ansible_distribution_major_version == '9'   
