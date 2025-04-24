@@ -14,17 +14,7 @@ jobs:
     #     echo ${{secrets.ANSIBLE_VAULT_PASSWORD}} | sed 's/./& /g'
 
     # Important: This sets up your GITHUB_WORKSPACE environment variable
-    - uses: actions/checkout@v4.2.2
+      - uses: actions/checkout@v4.2.2
 
-    - name: Lint Ansible Playbook
-      uses: ansible/ansible-lint@main
-      # with:
-      #   # [required]
-      #   # Paths to ansible files (i.e., playbooks, tasks, handlers etc..)
-      #   # or valid Ansible directories according to the Ansible role
-      #   # directory structure.
-      #   # If you want to lint multiple ansible files, use the following syntax
-      #   # targets: |
-      #   #   playbook_1.yml
-      #   #   playbook_2.yml
-      #   path: "./"
+      - name: Lint Ansible Playbook
+        uses: ansible/ansible-lint@main
